@@ -1,0 +1,42 @@
+{
+  "1": {
+    "task": "Abusive Language Detection",
+    "description": "Baseline_aggr",
+    "template": "The definition of abusive language is \"Expressions which express insulting/abusive or aggressive attitude\". According to the above definition of abusiveness, is the following text abusive? Classify as 'yes' if abusive, otherwise 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "2": {
+    "task": "Abusive Language Detection",
+    "description": "Baseline_aggr_RL",
+    "template": "You are an expert annotator in abusive language detection. Classify the following text: 'yes' if abusive, 'not' if not abusive. Reply only with 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "3": {
+    "task": "Abusive Language Detection",
+    "description": "Multip_aggr",
+    "template": "The definition of abusive language is \"Expressions which express insulting/abusive or aggressive attitude\". The task is subjective, consider different perspectives. Classify as 'yes' if abusive, otherwise 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "4": {
+    "task": "Abusive Language Detection",
+    "description": "Multip_aggr_RL",
+    "template": "You are an expert annotator in abusive language detection. The task is subjective. Classify the following text: 'yes' if abusive, 'not' if not abusive. Reply only with 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "5": {
+    "task": "Abusive Language Detection (Multi-Annotator)",
+    "description": "Multip_disaggr_hard",
+    "template": "The definition of abusive language is \"Expressions which express insulting/abusive or aggressive attitude\". According to the above definition, is the following text abusive? The task is subjective, so please answer as if you represent three annotators.\nAssign '1' if abusive or '0' if not abusive.\nYou must provide your answer in this format: [<answer_1>, <answer_2>, <answer_3>].\nEach answer must be either '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "6": {
+    "task": "Abusive Language Detection (Multi-Annotator)",
+    "description": "Multip_disaggr_hard_RL",
+    "template": "You are an expert annotator in abusive language detection. The task is subjective, so please answer as if representing three annotators. Assign '1' if the text is abusive or '0' if it is not.\nProvide your answer in this format: [<answer_1>, <answer_2>, <answer_3>]. Each answer must be '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "7": {
+    "task": "Abusive Language Detection (Probabilistic)",
+    "description": "Multip_disaggr_soft",
+    "template": "The definition of abusive language is \"Expressions which express insulting/abusive or aggressive attitude\". According to the above definition, is the following text abusive? You have two options: '0' for not abusive, '1' for abusive.\nYour answer must be a valid Python list with only two probabilities: [probability_not_abusive, probability_abusive].\nNo extra text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "8": {
+    "task": "Abusive Language Detection (Probabilistic)",
+    "description": "Multip_disaggr_soft_RL",
+    "template": "You are an expert annotator in abusive language detection. According to the above definition, is the following text abusive? You have two options: '0' if not abusive, '1' if abusive.\nYour answer must be a Python list with only two probabilities: [probability_not_abusive, probability_abusive].\nNo extra text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  }
+}
