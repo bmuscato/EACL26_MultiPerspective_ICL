@@ -1,0 +1,41 @@
+{
+  "1": {
+    "task": "Sexism Detection (Arabic)",
+    "description": "Baseline_aggr",
+    "template": "The definition of sexism is \"discrimination or judging a person (women in particular) based on gender\". According to the above definition, is the following Arabic text sexist? Classify as 'yes' if sexist, otherwise 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "2": {
+    "task": "Sexism Detection (Arabic)",
+    "description": "Baseline_aggr_RL",
+    "template": "You are an expert annotator in sexism detection. Classify the following Arabic text: 'yes' if sexist, 'not' if not sexist. Reply only with 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "3": {
+    "task": "Sexism Detection (Arabic)",
+    "description": "Multip_aggr",
+    "template": "The definition of sexism is \"discrimination or judging a person (women in particular) based on gender\". The task is subjective, consider different perspectives. Classify as 'yes' if sexist, otherwise 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "4": {
+    "task": "Sexism Detection (Arabic)",
+    "description": "Multip_aggr_RL",
+    "template": "You are an expert annotator in sexism detection. The task is subjective. Classify the following Arabic text: 'yes' if sexist, 'not' if not sexist. Reply only with 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "5": {
+    "task": "Sexism Detection (Arabic, Multi-Annotator)",
+    "description": "Multip_disaggr_hard",
+    "template": "The definition of sexism is \"discrimination or judging a person (women in particular) based on gender\". According to the above definition, is the following Arabic text sexist? The task is subjective, so please answer as if you represent three annotators.\nAssign '1' if sexist or '0' if not sexist.\nYou must provide your answer in this format: [<answer_1>, <answer_2>, <answer_3>].\nEach answer must be either '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "6": {
+    "task": "Sexism Detection (Arabic, Multi-Annotator)",
+    "description": "Multip_disaggr_hard_RL",
+    "template": "You are an expert annotator in sexism detection. The task is subjective, so please answer as if representing three annotators. Assign '1' if the text is sexist or '0' if it is not.\nProvide your answer in this format: [<answer_1>, <answer_2>, <answer_3>]. Each answer must be '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "7": {
+    "task": "Sexism Detection (Arabic, Probabilistic)",
+    "description": "Multip_disaggr_soft",
+    "template": "The definition of sexism is \"discrimination or judging a person (women in particular) based on gender\". According to the above definition, is the following Arabic text sexist? You have two options: '0' for not sexist, '1' for sexist.\nYour answer must be a valid Python list with only two probabilities: [probability_not_sexist, probability_sexist].\nNo extra text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "8": {
+    "task": "Sexism Detection (Arabic, Probabilistic)",
+    "description": "Multip_disaggr_soft_RL",
+    "template": "You are an expert annotator in sexism detection. According to the above definition, is the following Arabic text sexist? You have two options: '0' if not sexist, '1' if sexist.\nYour answer must be a Python list with only two probabilities: [probability_not_sexist, probability_sexist].\nNo extra text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
