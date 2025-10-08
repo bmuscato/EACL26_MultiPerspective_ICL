@@ -1,72 +1,42 @@
-PROMPT_CONTENT = {
-    "1": """The definition of offensive language is "Hurtful, derogatory or obscene comments made by one person to another person". 
-    According to the above definition of offensiveness, is the following text offensive? 
-    Classify as 'yes' if offensive, otherwise 'not'.
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """,
-
-    "2": """You are an expert annotator in offensive language detection. 
-    Classify the following text: 'yes' if offensive, 'not' if not offensive. 
-    Reply only with 'yes' or 'not'. 
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """,
-
-    "3": """The definition of offensive language is "Hurtful, derogatory or obscene comments made by one person to another person". 
-    The task is subjective, consider different perspectives. 
-    Classify as 'yes' if offensive, otherwise 'not'. 
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """,
-
-    "4": """You are an expert annotator in offensive language detection. 
-    The task is subjective. Classify the following text: 'yes' if offensive, 'not' if not offensive. 
-    Reply only with 'yes' or 'not'. 
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """,
-
-    "5": """The definition of offensive language is "Hurtful, derogatory or obscene comments made by one person to another person". 
-    According to the above definition, is the following text offensive? 
-    The task is subjective, so please answer as you are representing the different perspectives of three annotators. 
-    You can assign '1' if the text is offensive or '0' if it is not offensive. 
-    You must provide your answer in a list in the following format: [<answer_1>, <answer_2>, <answer_3>]. 
-    Remember to: 1) assign **three labels** for each row, 2) choose only between '0' or '1'. 
-    No explanations are allowed. 
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """,
-
-    "6": """You are an expert annotator in offensive language detection. 
-    The task is subjective, so please answer as you are representing the different perspectives of three annotators. 
-    You can assign '1' if the text is offensive or '0' if it is not offensive. 
-    You must provide your answer in a list in the following format: [<answer_1>, <answer_2>, <answer_3>]. 
-    Remember to: 1) assign **three labels** for each row, 2) choose only between '0' or '1'. 
-    No explanations are allowed. 
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """,
-
-    "7": """The definition of offensive language is "Hurtful, derogatory or obscene comments made by one person to another person". 
-    According to the above definition, is the following text offensive? 
-    You have two options: '0' if the text is not offensive, '1' if it is offensive.  
-    Your answer must be a valid Python list with ONLY two probabilities: 
-    1) the probability of not being offensive, and 2) the probability of being offensive, in the following format: 
-    ['probability not being offensive', 'probability of being offensive'].  
-    The only answer allowed is the list of probabilities, no extra text.  
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """,
-
-    "8": """You are an expert annotator in offensive language detection. 
-    According to the above definition, is the following text offensive? 
-    You have two options: '0' if the text is not offensive, '1' if it is offensive.  
-    Your answer must be a valid Python list with ONLY two probabilities: 
-    1) the probability of not being offensive, and 2) the probability of being offensive, in the following format: 
-    ['probability not being offensive', 'probability of being offensive'].  
-    The only answer allowed is the list of probabilities, no extra text.  
-    Here are some examples of the task: {examples}.  
-    Tweet: {text}  
-    Label: """
+{
+  "1": {
+    "task": "Offensive Language Detection",
+    "description": "Baseline_aggr",
+    "template": "The definition of offensive language is \"Hurtful, derogatory or obscene comments made by one person to another person\". According to the above definition of offensiveness, is the following text offensive? Classify as 'yes' if offensive, otherwise 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "2": {
+    "task": "Offensive Language Detection",
+    "description": "Baseline_aggr_RL",
+    "template": "You are an expert annotator in offensive language detection. Classify the following text: 'yes' if offensive, 'not' if not offensive. Reply only with 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "3": {
+    "task": "Offensive Language Detection",
+    "description": "Multip_aggr",
+    "template": "The definition of offensive language is \"Hurtful, derogatory or obscene comments made by one person to another person\". The task is subjective, consider different perspectives. Classify as 'yes' if offensive, otherwise 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "4": {
+    "task": "Offensive Language Detection",
+    "description": "Multip_aggr_RL",
+    "template": "You are an expert annotator in offensive language detection. The task is subjective. Classify the following text: 'yes' if offensive, 'not' if not offensive. Reply only with 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "5": {
+    "task": "Offensive Language Detection (Multi-Annotator)",
+    "description": "Multip_disaggr_hard",
+    "template": "The definition of offensive language is \"Hurtful, derogatory or obscene comments made by one person to another person\". According to the above definition, is the following text offensive? The task is subjective, so please answer as if you represent three annotators.\nAssign '1' if offensive or '0' if not offensive.\nYou must provide your answer in this format: [<answer_1>, <answer_2>, <answer_3>].\nEach answer must be either '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "6": {
+    "task": "Offensive Language Detection (Multi-Annotator)",
+    "description": "Multip_disaggr_hard_RL",
+    "template": "You are an expert annotator in offensive language detection. The task is subjective, so please answer as if representing three annotators. Assign '1' if the text is offensive or '0' if it is not.\nProvide your answer in this format: [<answer_1>, <answer_2>, <answer_3>]. Each answer must be '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "7": {
+    "task": "Offensive Language Detection (Probabilistic)",
+    "description": "Multip_disaggr_soft",
+    "template": "The definition of offensive language is \"Hurtful, derogatory or obscene comments made by one person to another person\". According to the above definition, is the following text offensive? You have two options: '0' for not offensive, '1' for offensive.\nYour answer must be a valid Python list with only two probabilities: [probability_not_offensive, probability_offensive].\nNo extra text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "8": {
+    "task": "Offensive Language Detection (Probabilistic)",
+    "description": "Multip_disaggr_soft_RL",
+    "template": "You are an expert annotator in offensive language detection. According to the above definition, is the following text offensive? You have two options: '0' if not offensive, '1' if offensive.\nYour answer must be a Python list with only two probabilities: [probability_not_offensive, probability_offensive].\nNo extra text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  }
 }
