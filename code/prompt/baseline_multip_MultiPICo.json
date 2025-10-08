@@ -1,0 +1,41 @@
+  "1": {
+    "task": "Irony Detection (Italian)",
+    "description": "Baseline_aggr",
+    "template": "The definition of irony is \"it implies the use of words that mean the opposite of what is really intended, where the surface sentiment differs from the implied sentiment\". According to the above definition, is the following Italian text ironic? Classify as 'yes' if ironic, otherwise 'not'. Reply only 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "2": {
+    "task": "Irony Detection (Italian)",
+    "description": "Baseline_aggr_RL",
+    "template": "You are an expert annotator in irony detection. Classify the following Italian text: 'yes' if ironic, 'not' if not ironic. Reply only with 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "3": {
+    "task": "Irony Detection (Italian)",
+    "description": "Multip_aggr",
+    "template": "The definition of irony is \"it implies the use of words that mean the opposite of what is really intended, where the surface sentiment differs from the implied sentiment\". The task is subjective; consider different perspectives. Classify as 'yes' if ironic, otherwise 'not'. Reply only 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "4": {
+    "task": "Irony Detection (Arabic)",
+    "description": "Multip_aggr_RL",
+    "template": "You are an expert annotator in irony detection. The task is subjective. Classify the following Arabic text: 'yes' if ironic, 'not' if not ironic. Reply only 'yes' or 'not'.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "5": {
+    "task": "Irony Detection (Italian, Multi-Annotator)",
+    "description": "Multip_disaggr_hard",
+    "template": "The definition of irony is \"it implies the use of words that mean the opposite of what is really intended, where the surface sentiment differs from the implied sentiment\". According to the above definition, is the following Italian text ironic? The task is subjective, so please answer as if representing three annotators.\nAssign '1' if ironic or '0' if not ironic.\nOutput format: [<answer_1>, <answer_2>, <answer_3>].\nEach answer must be '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "6": {
+    "task": "Irony Detection (Italian, Multi-Annotator)",
+    "description": "Multip_disaggr_hard_RL",
+    "template": "You are an expert annotator in irony detection. The task is subjective, so please answer as if representing three annotators. Assign '1' if the text is ironic or '0' if it is not. Output format: [<answer_1>, <answer_2>, <answer_3>]. Each answer must be '0' or '1'. No explanations allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "7": {
+    "task": "Irony Detection (Italian, Probabilistic)",
+    "description": "Multip_disaggr_soft",
+    "template": "The definition of irony is \"it implies the use of words that mean the opposite of what is really intended, where the surface sentiment differs from the implied sentiment\". According to the above definition, is the following Italian text ironic? You have two options: '0' if not ironic, '1' if ironic.\nYour answer must be a valid Python list with only two probabilities: [probability_not_ironic, probability_ironic].\nReturn the list as floats. No text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  },
+  "8": {
+    "task": "Irony Detection (Italian, Probabilistic)",
+    "description": "Multip_disaggr_soft_RL",
+    "template": "You are an expert annotator in irony detection. According to the above definition, is the following Italian text ironic? You have two options: '0' if not ironic, '1' if ironic.\nYour answer must be a valid Python list with only two probabilities: [probability_not_ironic, probability_ironic].\nReturn the list as floats. No text allowed.\nHere are some examples of the task: {examples}.\nTweet: {text}\nLabel:"
+  }
+}
