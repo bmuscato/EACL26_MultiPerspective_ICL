@@ -1,4 +1,4 @@
-# This repository is the official implementation of the EACL 2025 Paper entitled "Seeing All Sides: Multi-Perspective In-Context Learning for Subjective NLP" 
+# This repository is the official implementation of the EACL 2026 Paper entitled "Seeing All Sides: Multi-Perspective In-Context Learning for Subjective NLP" 
 
 ## Abstract
 
